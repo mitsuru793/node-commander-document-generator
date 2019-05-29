@@ -13,6 +13,11 @@
   },
   "devDependencies": {
     "@types/jest": "^24.0.13",
+    "@types/mustache": "^0.8.32",
     "jest": "^24.8.0"
+  },
+  "dependencies": {
+    "commander": "^2.20.0",
+    "mustache": "^3.0.1"
   }
 }
