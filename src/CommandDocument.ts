@@ -11,7 +11,7 @@ export default class CommandDocument {
   }
 
   render(template: string) {
-    return Mustache.render(template.trim(), {commands: this.commands})
+    return Mustache.render(template.trim(), {commands: this.commands}).trim()
   }
 
   static parse(program: Commander): CommandDocument {
