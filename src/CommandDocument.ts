@@ -18,7 +18,7 @@ export default class CommandDocument {
     const commands = program.commands.map((c: Commander) => {
       const name: string = c._name
       const description = c._description
-      const args: Argument[] = c._args.map(arg => new Argument(arg))
+      const args: Argument[] = c._args.map((arg: Readonly<Argument>) => new Argument(arg))
       const options: Option[] = c.options
       return new Command({name, description, args, options})
     })

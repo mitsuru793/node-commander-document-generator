@@ -7,7 +7,7 @@ export default class Command {
   readonly options: Option[]
   readonly description: string
 
-  constructor(props) {
+  constructor(props: Readonly<Command>) {
     this.name = props.name
     this.description = props.description
     this.args = props.args

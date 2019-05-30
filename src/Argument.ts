@@ -3,7 +3,7 @@ export default class Argument {
   readonly required: boolean
   readonly variadic: boolean
 
-  constructor(props) {
+  constructor(props: Readonly<Argument>) {
     this.name = props.name
     this.required = props.required
     this.variadic = props.variadic
