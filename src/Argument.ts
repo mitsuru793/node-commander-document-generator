@@ -1,4 +1,4 @@
-export default class Argument {
+export class Argument {
   readonly name: string
   readonly required: boolean
   readonly variadic: boolean

@@ -1,8 +1,7 @@
 import {Command as Commander} from "commander"
-import CommandDocument from "../CommandDocument"
+import {CommandDocument} from "../index"
 
 const program = new Commander()
-
 program
   .command('hello <messsage>')
   .description('just hello')

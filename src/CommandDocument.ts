@@ -1,9 +1,9 @@
 import * as Mustache from "mustache"
 import {Command as Commander, Option} from "commander"
-import Command from "./Command"
-import Argument from "./Argument"
+import {Command} from "./Command"
+import {Argument} from "./Argument"
 
-export default class CommandDocument {
+export class CommandDocument {
   readonly commands: Command[]
 
   constructor(commands: Command[]) {

@@ -1,7 +1,7 @@
-import Argument from "./Argument"
 import {Option} from "commander"
+import {Argument} from "./Argument"
 
-export default class Command {
+export class Command {
   readonly name: string
   readonly args: Argument[]
   readonly options: Option[]

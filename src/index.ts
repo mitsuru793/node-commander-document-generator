@@ -1,3 +1,5 @@
-import CommandDocument from "./CommandDocument"
+import {CommandDocument} from "./CommandDocument"
 
-export default CommandDocument
+export {
+  CommandDocument
+}
