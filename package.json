@@ -1,6 +1,7 @@
 {
-  "name": "TODO",
+  "name": "commander-document-generator",
   "version": "0.1.0",
+  "description": "This generates document for tj/commander.js. It helps you to write sections of command guide on README.md.",
   "main": "dist/index.js",
   "author": "mitsuru793 <mitsuru793@gmail.com>",
   "license": "MIT",
@@ -9,8 +10,12 @@
   },
   "scripts": {
     "dev": "ts-node src/index.ts",
-    "test": "jest"
+    "test": "jest",
+    "prepare": "build",
+    "prepublishOnly": "test",
+    "postversion" : "git push && git push --tags"
   },
+  "keywords": ["document", "commander", "generator", "readme"],
   "devDependencies": {
     "@types/jest": "^24.0.13",
     "@types/mustache": "^0.8.32",
