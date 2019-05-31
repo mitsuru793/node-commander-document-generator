@@ -17,6 +17,9 @@
     "prepublishOnly": "yarn run test",
     "postversion": "git push && git push --tags"
   },
+  "files": [
+    "dist/**/*"
+  ],
   "keywords": [
     "document",
     "commander",
