@@ -3,12 +3,12 @@ import {CommandDocument} from "../index"
 
 const program = new Commander()
 program
-  .command('hello <messsage>')
+  .command('hello <message>')
   .description('just hello')
   .option("-t, --to <name>", "target user")
   .option("-s, --silent", "not say")
 program
-  .command('greet <message>')
+  .command('greet [message]')
   .description('just greet')
 
 describe('CommandDocument', () => {
@@ -16,7 +16,7 @@ describe('CommandDocument', () => {
     const doc = CommandDocument.parse(program)
     const template = `
 {{#commands}}
-### {{name}}
+### {{name}} {{{args.0.display}}}
 
 {{description}}
 
@@ -30,7 +30,7 @@ describe('CommandDocument', () => {
 `
     const output = doc.render(template)
     const expected = `
-### hello
+### hello <message>
 
 just hello
 
@@ -42,7 +42,7 @@ target user
 
 not say
 
-### greet
+### greet [message]
 
 just greet
     `.trim()

@@ -22,6 +22,7 @@ You can use a variable 'command' in template. The following is property list of 
 
 **Argument**
 * name: string
+* display: boolean
 * required: boolean
 * variadic: boolean
 
@@ -43,14 +44,14 @@ import CommandDocument from "commander-document-genertor"
 const program = new Commander()
 
 program
-  .command('hello <messsage>')
+  .command('hello <message>')
   .description('just hello')
   .option("-t, --to <name>", "target user")
   .option("-s, --silent", "not say")
 
 const template = `
 {{#commands}}
-### {{name}}
+### {{name}} {{{args.0.display}}}
 
 {{description}}
 
@@ -68,7 +69,7 @@ console.log(doc.render(template))
 
 output
 ```
-### hello
+### hello <message>
 
 just hello
 

@@ -8,4 +8,16 @@ export class Argument {
     this.required = props.required
     this.variadic = props.variadic
   }
+
+  get display(): string {
+    if (this.required) {
+      return `<${this.name}>`
+    }
+
+    if (this.variadic) {
+      return `[${this.name}...]`
+    }
+
+    return `[${this.name}]`
+  }
 }
