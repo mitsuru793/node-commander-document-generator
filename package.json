@@ -1,6 +1,6 @@
 {
   "name": "@mitsuru793/commander-document-generator",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "This generates document for tj/commander.js. It helps you to write sections of command guide on README.md.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
